@@ -35,4 +35,15 @@ class Employee
 	{
 		return $"{FullName} (Age: {Age})";
 	}
+
+	public void Read()
+	{
+		Console.WriteLine("Enter First Name: ");
+		FirstName = Console.ReadLine();
+
+		Console.WriteLine("Enter Last Name: ");
+		LastName = Console.ReadLine();
+
+		BirthDate = DateTime.Now;
+	}
 }
