@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace PhoneBook;
 
@@ -16,6 +18,7 @@ class Contact
 	public string Email { get; set; }
 	public string PhoneNumber { get; set; }
 
+	[JsonIgnore]
 	public string FullName => $"{FirstName} {LastName}";
 
 	public void Read()

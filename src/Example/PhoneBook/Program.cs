@@ -3,13 +3,15 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 
+using Newtonsoft.Json;
+
 namespace PhoneBook;
 
 internal class Program
 {
 	static void Main()
 	{
-		const string DATA_FILENAME = "Data.txt";
+		const string DATA_FILENAME = "Data.json";
 
 		var contacts = new List<Contact>();
 
@@ -50,7 +52,7 @@ internal class Program
 					break;
 
 				case 3:
-					File.WriteAllLines(DATA_FILENAME, contacts.Select(c => c.Pack()));
+					File.WriteAllText(DATA_FILENAME, JsonConvert.SerializeObject(contacts, Formatting.Indented));
 					break;
 
 				case 4:
@@ -60,9 +62,8 @@ internal class Program
 						break;
 					}
 
-					contacts = File.ReadAllLines(DATA_FILENAME)
-						.Select(Contact.From)
-						.ToList();
+					var content = File.ReadAllText(DATA_FILENAME);
+					contacts = JsonConvert.DeserializeObject<List<Contact>>(content);
 					break;
 
 				case 5:
