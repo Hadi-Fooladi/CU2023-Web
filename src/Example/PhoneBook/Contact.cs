@@ -19,7 +19,7 @@ class Contact
 		PhoneNumber = Prompt("Phone #: ");
 	}
 
-	public string Prompt(string message)
+	public static string Prompt(string message)
 	{
 		Console.Write(message);
 		return Console.ReadLine();
