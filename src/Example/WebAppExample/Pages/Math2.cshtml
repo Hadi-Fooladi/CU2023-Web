@@ -1,0 +1,28 @@
+﻿@page "{num1:int}/{op:maxlength(3)}/{num2:int}"
+@model WebAppExample.Pages.Math2Model
+
+@{
+    int num1 = Model.Input.Num1;
+    int num2 = Model.Input.Num2;
+    string s = Model.Input.Op;
+
+    int result = 0;
+    char op = '?';
+
+    switch (s)
+    {
+        case "add": result = num1 + num2; op = '+'; break;
+        case "sub": result = num1 - num2; op = '-'; break;
+        case "mul": result = num1 * num2; op = '*'; break;
+        case "div": result = num1 / num2; op = '/'; break;
+    }
+
+    if (op == '?')
+    {
+        <span>Invalid Operator</span>
+    }
+    else
+    {
+        <span>@num1 @op @num2 = @result</span>
+    }
+}
