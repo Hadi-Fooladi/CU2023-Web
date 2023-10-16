@@ -6,3 +6,7 @@
 <h1>Math (v3)</h1>
 
 <b>@Model.Text</b>
+
+<p><a href='@Url.Page("Fibo", new { num = Model.Result })'>1- Fibo @Model.Result</a></p>
+
+<p><a href='/Fibo/@Model.Result'>2- Fibo @Model.Result</a></p>
