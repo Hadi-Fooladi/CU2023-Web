@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBook", "PhoneBook\Phon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBookWeb", "PhoneBookWeb\PhoneBookWeb.csproj", "{EEB781DE-934B-49F8-BFAA-5255A59B9750}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppExample", "WebAppExample\WebAppExample.csproj", "{29F87AD3-813B-42DA-9C19-38A2806BDB52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppExample", "WebAppExample\WebAppExample.csproj", "{29F87AD3-813B-42DA-9C19-38A2806BDB52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XO", "XO\XO.csproj", "{5596E268-9BE1-4143-AF51-4FA2C3F99FEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{29F87AD3-813B-42DA-9C19-38A2806BDB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29F87AD3-813B-42DA-9C19-38A2806BDB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29F87AD3-813B-42DA-9C19-38A2806BDB52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5596E268-9BE1-4143-AF51-4FA2C3F99FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5596E268-9BE1-4143-AF51-4FA2C3F99FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5596E268-9BE1-4143-AF51-4FA2C3F99FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5596E268-9BE1-4143-AF51-4FA2C3F99FEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
