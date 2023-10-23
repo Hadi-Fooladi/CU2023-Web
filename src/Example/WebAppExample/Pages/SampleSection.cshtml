@@ -1,0 +1,17 @@
+﻿@page
+@model WebAppExample.Pages.SampleSectionModel
+@{
+    Layout = "LayoutWithSection";
+}
+
+<h1>Main Body</h1>
+
+@section Menu
+{
+    <ul>
+        @for (int i = 1; i < 10; i++)
+        {
+            <li>Menu @i</li>
+        }
+    </ul>
+}
