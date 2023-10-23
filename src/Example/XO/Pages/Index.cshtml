@@ -1,10 +1,15 @@
-﻿@page
+﻿@page "{s?}"
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@for (int row = 0; row < 3; row++)
+{
+    for (int col = 0; col < 3; col++)
+    {
+        @Model.Game[row, col]
+    }
+
+    <br />
+}

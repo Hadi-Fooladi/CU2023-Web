@@ -5,15 +5,11 @@ namespace XO.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        public Game Game { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public void OnGet(string? s)
         {
-            _logger = logger;
-        }
-
-        public void OnGet()
-        {
+            Game = s == null ? new Game() : new Game(s);
 
         }
     }
