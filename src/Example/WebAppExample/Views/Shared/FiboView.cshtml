@@ -1,0 +1,15 @@
+﻿@model int
+
+<ul>
+    @{
+        int a = 1, b = 1, num = Model;
+        for (int i = 0; i < num; i++)
+        {
+            <li>@a</li>
+
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+</ul>
