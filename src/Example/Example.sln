@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBookWeb", "PhoneBookWe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppExample", "WebAppExample\WebAppExample.csproj", "{29F87AD3-813B-42DA-9C19-38A2806BDB52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XO", "XO\XO.csproj", "{5596E268-9BE1-4143-AF51-4FA2C3F99FEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XO", "XO\XO.csproj", "{5596E268-9BE1-4143-AF51-4FA2C3F99FEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

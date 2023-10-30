@@ -1,12 +1,12 @@
 ﻿using PhoneBookWeb;
 
-namespace PhoneBookWebs;
+namespace PhoneBookWeb;
 
 static class Global
 {
     public static List<Contact> Contacts = new()
     {
-        new Contact()
+        new Contact
         {
             FirstName = "John",
             LastName = "Doe",
