@@ -1,0 +1,24 @@
+﻿@page
+@model PhoneBookWeb.Pages.AddModel
+@{
+}
+
+<form asp-page="Add">
+    <div class="form-group">
+        <label asp-for="Contact.FirstName"></label>
+        <input class="form-control" asp-for="Contact.FirstName" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Contact.LastName"></label>
+        <input class="form-control" asp-for="Contact.LastName" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Contact.Email"></label>
+        <input class="form-control" asp-for="Contact.Email" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Contact.PhoneNumber"></label>
+        <input class="form-control" asp-for="Contact.PhoneNumber" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
