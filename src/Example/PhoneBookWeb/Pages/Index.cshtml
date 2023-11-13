@@ -7,6 +7,6 @@
 <ul>
     @foreach (var contact in Global.Contacts)
     {
-        <li>@contact.FirstName @contact.LastName (Phone #: @contact.PhoneNumber) [@contact.Email]</li>
+        <li>@contact.FirstName @contact.LastName (Phone #: @contact.PhoneNumber) [@contact.Email] (@contact.Gender)</li>
     }
 </ul>

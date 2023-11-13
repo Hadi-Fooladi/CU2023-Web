@@ -20,5 +20,9 @@
         <label asp-for="Contact.PhoneNumber"></label>
         <input class="form-control" asp-for="Contact.PhoneNumber" />
     </div>
+    <div class="form-group">
+        <label asp-for="Contact.Gender"></label>
+        <select class="form-control" asp-for="Contact.Gender" asp-items="@Contact.Genders"></select>
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
