@@ -14,7 +14,7 @@ namespace PhoneBookWeb.Pages
 
         public IActionResult OnPost()
         {
-            Global.Contacts.Add(Contact);
+            Global.Add(Contact);
 
             return RedirectToPage("Index");
         }

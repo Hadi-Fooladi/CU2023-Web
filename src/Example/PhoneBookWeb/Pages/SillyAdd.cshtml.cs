@@ -7,7 +7,7 @@ namespace PhoneBookWeb.Pages
     {
         public IActionResult OnGet(string first, string last, string phone, string email)
         {
-            Global.Contacts.Add(new Contact
+            Global.Add(new Contact
             {
                 FirstName = first,
                 LastName = last,

@@ -19,6 +19,8 @@ namespace PhoneBookWeb
 				app.UseHsts();
 			}
 
+            Global.Init(app.Environment.ContentRootPath);
+
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 

@@ -1,17 +1,36 @@
-﻿using PhoneBookWeb;
+﻿using Newtonsoft.Json;
 
 namespace PhoneBookWeb;
 
 static class Global
 {
-    public static List<Contact> Contacts = new()
+    public static string Root { get; private set; }
+
+    public static List<Contact> Contacts = new();
+
+    public static void Add(Contact contact)
     {
-        new Contact
+        Contacts.Add(contact);
+        SaveContactsToFile();
+    }
+
+    public static void Init(string root)
+    {
+        Root = root;
+
+        var filePath = Path.Combine(Root, "Contacts.json");
+        if (File.Exists(filePath))
         {
-            FirstName = "John",
-            LastName = "Doe",
-            PhoneNumber = "123-456-7890",
-            Email = "JohnDoe@gmail.com"
+            var json = File.ReadAllText(filePath);
+            Contacts = JsonConvert.DeserializeObject<List<Contact>>(json)!;
         }
-    };
+    }
+
+    static void SaveContactsToFile()
+    {
+        var json = JsonConvert.SerializeObject(Contacts, Formatting.Indented);
+        var filePath = Path.Combine(Root, "Contacts.json");
+
+        File.WriteAllText(filePath, json);
+    }
 }
