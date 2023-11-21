@@ -11,10 +11,12 @@ public class Contact
     [Display(Name = "Last Name:")]
     public string LastName { get; set; }
     
+    [EmailAddress]
     [Display(Name = "Email:")]
     public string Email { get; set; }
     
     [Display(Name = "Phone #:")]
+    [Phone]
     public string PhoneNumber { get; set; }
 
     [Display(Name = "Gender:")]

@@ -14,6 +14,17 @@ namespace PhoneBookWeb.Pages
 
         public IActionResult OnPost()
         {
+            if (!ModelState.IsValid)
+                return Page();
+
+            if (Contact.Email.Contains("@gmail.com"))
+            {
+                ModelState.AddModelError(string.Empty, "Gmail is not supported");
+                return Page();
+            }
+
+
+
             Global.Add(Contact);
 
             return RedirectToPage("Index");
