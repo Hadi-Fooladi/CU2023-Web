@@ -8,6 +8,7 @@ namespace PhoneBookWeb
 
 			// Add services to the container.
 			builder.Services.AddRazorPages();
+			builder.Services.AddControllers();
 
 			var app = builder.Build();
 
@@ -19,7 +20,7 @@ namespace PhoneBookWeb
 				app.UseHsts();
 			}
 
-            Global.Init(app.Environment.ContentRootPath);
+			Global.Init(app.Environment.ContentRootPath);
 
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
@@ -29,6 +30,7 @@ namespace PhoneBookWeb
 			app.UseAuthorization();
 
 			app.MapRazorPages();
+			app.MapControllers();
 
 			app.Run();
 		}
