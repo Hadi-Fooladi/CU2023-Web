@@ -4,12 +4,16 @@ namespace PhoneBookWeb;
 
 static class Global
 {
+	private static int s_id;
+
     public static string Root { get; private set; }
 
     public static List<Contact> Contacts = new();
 
     public static void Add(Contact contact)
     {
+	    s_id++;
+        contact.Id = s_id;
         Contacts.Add(contact);
         SaveContactsToFile();
     }
@@ -23,10 +27,11 @@ static class Global
         {
             var json = File.ReadAllText(filePath);
             Contacts = JsonConvert.DeserializeObject<List<Contact>>(json)!;
+            s_id = Contacts.Max(c => c.Id);
         }
     }
 
-    static void SaveContactsToFile()
+    public static void SaveContactsToFile()
     {
         var json = JsonConvert.SerializeObject(Contacts, Formatting.Indented);
         var filePath = Path.Combine(Root, "Contacts.json");
