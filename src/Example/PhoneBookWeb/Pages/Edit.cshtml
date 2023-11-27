@@ -1,0 +1,33 @@
+﻿@page "{id:int}"
+@model PhoneBookWeb.Pages.EditModel
+@{
+}
+
+<form asp-page="Edit">
+    <div class="form-group">
+        <label asp-for="Contact.FirstName"></label>
+        <input class="form-control" asp-for="Contact.FirstName" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Contact.LastName"></label>
+        <input class="form-control" asp-for="Contact.LastName" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Contact.Email"></label>
+        <input class="form-control" asp-for="Contact.Email" />
+        <span class="text-danger" asp-validation-for="Contact.Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Contact.PhoneNumber"></label>
+        <input class="form-control" asp-for="Contact.PhoneNumber" />
+        <span class="text-danger" asp-validation-for="Contact.PhoneNumber"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Contact.Gender"></label>
+        <select class="form-control" asp-for="Contact.Gender" asp-items="@Contact.Genders"></select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="text-danger" asp-validation-summary="All"></div>

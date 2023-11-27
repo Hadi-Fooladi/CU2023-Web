@@ -18,7 +18,7 @@
     @foreach (var contact in Global.Contacts)
     {
         <tr>
-            <td>@contact.Id</td>
+            <td><a asp-page="Edit" asp-route-id="@contact.Id">Edit</a></td>
             <td>@contact.FirstName</td>
             <td>@contact.LastName</td>
             <td>@contact.Email</td>

@@ -38,4 +38,9 @@ static class Global
 
         File.WriteAllText(filePath, json);
     }
+
+    public static Contact GetContactById(int id)
+    {
+	    return Contacts.Single(c => c.Id == id);
+    }
 }
