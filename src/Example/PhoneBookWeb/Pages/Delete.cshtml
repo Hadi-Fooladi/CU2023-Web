@@ -1,0 +1,11 @@
+﻿@page "{id:int}"
+@model PhoneBookWeb.Pages.DeleteModel
+@{
+    var contact = Model.Contact;
+}
+
+<p>Are you sure to delete @($"{contact.FirstName} {contact.LastName}")?</p>
+
+<form asp-page="Delete">
+    <button type="submit" class="text-danger h1">Delete</button>
+</form>

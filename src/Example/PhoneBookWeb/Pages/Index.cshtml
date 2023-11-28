@@ -18,7 +18,10 @@
     @foreach (var contact in Global.Contacts)
     {
         <tr>
-            <td><a asp-page="Edit" asp-route-id="@contact.Id">Edit</a></td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@contact.Id">Edit</a>
+                <a asp-page="Delete" asp-route-id="@contact.Id" class="text-danger">Delete</a>
+            </td>
             <td>@contact.FirstName</td>
             <td>@contact.LastName</td>
             <td>@contact.Email</td>

@@ -43,4 +43,10 @@ static class Global
     {
 	    return Contacts.Single(c => c.Id == id);
     }
+
+    public static void DeleteContactById(int id)
+    {
+        Contacts.RemoveAll(c => c.Id == id);
+        SaveContactsToFile();
+    }
 }
